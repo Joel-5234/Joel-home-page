@@ -33,6 +33,12 @@ cp index.html dist/
 cp styles.css dist/
 cp script.js dist/
 
+# Copy images folder if it exists
+if [ -d "images" ] && [ "$(ls -A images 2>/dev/null)" ]; then
+    echo "Copying images folder..."
+    cp -r images dist/
+fi
+
 # Create a README for the dist folder
 cat > dist/README.md << 'EOF'
 # Joel Lopez Personal Website - Deployment Package
