@@ -231,6 +231,15 @@ body {
     color: #000;
 }
 
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    max-height: 300px;
+}
+
 .project-card p {
     flex-grow: 1;
     margin-bottom: 1.5rem;
