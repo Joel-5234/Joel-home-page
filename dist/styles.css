@@ -293,6 +293,26 @@ body {
 }
 
 /* Contact Section */
+.portfolio-thumbnail-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.portfolio-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+    display: inline-block;
+}
+
+.portfolio-thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
 .contact-list {
     list-style: none;
     padding: 0;
