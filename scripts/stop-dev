@@ -1,0 +1,8 @@
+#!/bin/bash
+# Stop development environment
+
+echo "Stopping development server..."
+pkill -f "python.*http.server"
+pkill -f "SimpleHTTPServer"
+echo "Development server stopped."
+

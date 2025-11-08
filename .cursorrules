@@ -1,0 +1,43 @@
+# Cursor Rules for Joel's Personal Website
+
+## Project Context
+This is a static personal website for Joel Lopez, an 8th grade student. The site is built with pure HTML, CSS, and vanilla JavaScript - no build tools or frameworks.
+
+## Tech Stack
+- HTML5 (semantic HTML)
+- CSS3 (vanilla CSS, no preprocessors)
+- Vanilla JavaScript (no frameworks)
+- Reference design: ./ref/html5up-ethereal/* for look and feel
+
+## Code Style
+- Use semantic HTML: header, main, section, footer, nav
+- Keep CSS in styles.css, JavaScript in script.js
+- Write clear, well-commented code that an 8th grader can understand
+- Use consistent spacing and white space
+- Follow responsive design principles (mobile-first approach)
+
+## Design Guidelines
+- Color scheme: Light background with dark text, black and gold accents (High Tech High colors)
+- Typography: Clean sans serif font stack (system UI fonts)
+- Layout: Responsive for desktop, tablet, and phone
+- Components: Simple cards with rounded corners and subtle shadows
+- Interactions: Smooth scrolling, hover animations on buttons and cards
+
+## File Structure
+- index.html: Main HTML file
+- styles.css: All CSS styles
+- script.js: All JavaScript functionality
+
+## Testing
+- Use Playwright for UI tests
+- Test responsive design on multiple viewport sizes
+- Test smooth scrolling and navigation
+- Test accessibility and contrast
+
+## Best Practices
+- Keep code simple and readable
+- No external libraries except Google Fonts if needed
+- Ensure good contrast for accessibility
+- Use semantic HTML for SEO and accessibility
+- Comment code to help Joel understand it
+

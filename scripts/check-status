@@ -1,0 +1,13 @@
+#!/bin/bash
+# Check status of development environment
+
+echo "Checking development environment status..."
+
+if pgrep -f "python.*http.server" > /dev/null || pgrep -f "SimpleHTTPServer" > /dev/null; then
+    echo "✓ Development server is running"
+    echo "  Access the site at: http://localhost:8000"
+else
+    echo "✗ Development server is not running"
+    echo "  Start it with: ./scripts/start-dev"
+fi
+

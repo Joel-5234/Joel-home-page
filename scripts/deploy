@@ -1,0 +1,48 @@
+#!/bin/bash
+# Deployment script for GitHub Pages
+# This script prepares and deploys the site to GitHub Pages
+
+set -e  # Exit on error
+
+echo "🚀 Starting deployment process..."
+
+# Build the site first
+echo "Step 1: Building site..."
+./scripts/build
+
+if [ $? -ne 0 ]; then
+    echo "✗ Build failed. Aborting deployment."
+    exit 1
+fi
+
+echo ""
+echo "✓ Build successful"
+echo ""
+echo "Step 2: Deployment options"
+echo ""
+echo "Option 1: Manual deployment"
+echo "  1. Copy contents of ./dist/ to the root of your repository"
+echo "  2. Commit and push to main branch"
+echo "  3. Enable GitHub Pages in repository settings"
+echo ""
+echo "Option 2: Deploy to gh-pages branch"
+echo "  Run: git subtree push --prefix dist origin gh-pages"
+echo ""
+echo "Option 3: Use GitHub Actions (recommended)"
+echo "  The .github/workflows/deploy.yml workflow will automatically"
+echo "  deploy when you push to the main branch."
+echo ""
+echo "Repository: https://github.com/Joel-5234/Joel-home-page.git"
+echo ""
+echo "📦 Deployment package is ready in ./dist/"
+echo ""
+echo "To deploy manually:"
+echo "  cd dist"
+echo "  git init"
+echo "  git add ."
+echo "  git commit -m 'Deploy site'"
+echo "  git remote add origin https://github.com/Joel-5234/Joel-home-page.git"
+echo "  git push -f origin main:gh-pages"
+echo ""
+echo "Or simply copy dist/* files to the root of your repository."
+

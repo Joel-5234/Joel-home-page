@@ -1,0 +1,35 @@
+{
+  "milestones": [
+    {
+      "id": "milestone-1",
+      "title": "Project Setup and Structure",
+      "status": "completed",
+      "description": "Set up folder structure, documentation, and initial project files"
+    },
+    {
+      "id": "milestone-2",
+      "title": "HTML Structure",
+      "status": "completed",
+      "description": "Create semantic HTML structure with all required sections"
+    },
+    {
+      "id": "milestone-3",
+      "title": "CSS Styling",
+      "status": "completed",
+      "description": "Implement responsive CSS with High Tech High color scheme"
+    },
+    {
+      "id": "milestone-4",
+      "title": "JavaScript Functionality",
+      "status": "completed",
+      "description": "Add smooth scrolling, navigation, and interactive features"
+    },
+    {
+      "id": "milestone-5",
+      "title": "Testing and Polish",
+      "status": "completed",
+      "description": "Set up Playwright tests, test responsiveness, and polish design"
+    }
+  ]
+}
+

@@ -1,0 +1,61 @@
+#!/bin/bash
+# Build script for static site
+# Packages the site into a dist folder for deployment
+
+echo "Building project..."
+
+# Check if required files exist
+if [ ! -f "index.html" ]; then
+    echo "✗ Error: index.html not found"
+    exit 1
+fi
+
+if [ ! -f "styles.css" ]; then
+    echo "✗ Error: styles.css not found"
+    exit 1
+fi
+
+if [ ! -f "script.js" ]; then
+    echo "✗ Error: script.js not found"
+    exit 1
+fi
+
+echo "✓ All required files found"
+
+# Create dist folder
+echo "Creating dist folder..."
+rm -rf dist
+mkdir -p dist
+
+# Copy essential website files
+echo "Copying website files..."
+cp index.html dist/
+cp styles.css dist/
+cp script.js dist/
+
+# Create a README for the dist folder
+cat > dist/README.md << 'EOF'
+# Joel Lopez Personal Website - Deployment Package
+
+This folder contains the production-ready files for GitHub Pages deployment.
+
+## Files
+- index.html - Main HTML file
+- styles.css - All CSS styles
+- script.js - All JavaScript functionality
+
+## Deployment
+These files can be deployed to GitHub Pages by:
+1. Pushing this folder's contents to the root of the gh-pages branch, OR
+2. Configuring GitHub Pages to use the /dist folder, OR
+3. Using the deploy script: ./scripts/deploy
+
+For more information, see the main README.md in the project root.
+EOF
+
+echo "✓ Build complete - site packaged in dist/ folder"
+echo ""
+echo "Deployment package ready in: ./dist/"
+echo "Files included:"
+ls -lh dist/
+
